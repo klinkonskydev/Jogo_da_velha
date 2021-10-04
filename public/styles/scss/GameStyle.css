@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+:root {
+  /* Default border */
+  --border-default: 2px solid #b1a1ff;
+  /* Typograph */
+  --font-family: 'Rajdhani', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: default;
+}
+
+HTML,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.pontuation-container {
+  position: absolute;
+  left: 10px;
+  height: 12rem;
+  width: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.pontuation-container .player-pontuation {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pontuation-container .player-pontuation h3 {
+  font: 200 45px var(--font-family);
+}
+
+.pontuation-container .player-pontuation.one {
+  border-radius: 20px;
+  background-color: #aabbfb;
+}
+
+.pontuation-container .player-pontuation.two {
+  border-radius: 20px;
+  background-color: #bbaaff;
+}
+
+.player {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.player h1 {
+  font: 200 30px var(--font-family);
+  text-transform: uppercase;
+  color: #000;
+}
+
+.poupout {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: var(--border-default);
+  border-radius: 10px 2px 10px 10px;
+  padding: 1rem;
+  width: 26rem;
+  height: 80px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.poupout.actived {
+  right: 20px;
+  top: 20px;
+  opacity: 1;
+}
+
+.poupout h3 {
+  font: 500 26px var(--font-family);
+  opacity: .5;
+}
+
+.buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.buttons > .button {
+  position: relative;
+  padding: .5rem 3rem;
+  margin: 4rem 0;
+  border: none;
+  outline: none;
+  background: none;
+  color: #000;
+  font: 500 16pxvar --font-family;
+  text-transform: uppercase;
+}
+
+.buttons > .button span {
+  -webkit-transition: .4s;
+  transition: .4s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 9999px;
+  background: #b1a1ff;
+}
+
+.buttons > .button:hover {
+  color: #b1a1ff;
+}
+
+.buttons > .button:hover span {
+  width: 100%;
+  height: 3px;
+  background-color: #b1a1ff;
+}
+
+.container {
+  width: 30rem;
+  height: 30rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.container .square {
+  border: var(--border-default);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font: 100 5em var(--font-family);
+}
+
+.container .square:nth-child(1) {
+  border: none;
+  border-bottom: var(--border-default);
+}
+
+.container .square:nth-child(2) {
+  border: none;
+  border-left: var(--border-default);
+  border-right: var(--border-default);
+  border-bottom: var(--border-default);
+}
+
+.container .square:nth-child(3) {
+  border: none;
+  border-bottom: var(--border-default);
+}
+
+.container .square:nth-child(4) {
+  border: none;
+}
+
+.container .square:nth-child(5) {
+  border: none;
+  border-left: var(--border-default);
+  border-right: var(--border-default);
+}
+
+.container .square:nth-child(6) {
+  border: none;
+}
+
+.container .square:nth-child(7) {
+  border: none;
+  border-top: var(--border-default);
+}
+
+.container .square:nth-child(8) {
+  border: none;
+  border-top: var(--border-default);
+  border-left: var(--border-default);
+  border-right: var(--border-default);
+}
+
+.container .square:nth-child(9) {
+  border: none;
+  border-top: var(--border-default);
+}
+
+.container .square.x {
+  color: #4f6de3;
+}
+
+.container .square.o {
+  color: #aa7eff;
+}
+
+footer h3 {
+  font: 400 20pxvar --font-family;
+  opacity: .6;
+}
+/*# sourceMappingURL=GameStyle.css.map */

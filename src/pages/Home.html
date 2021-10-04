@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../public/styles/scss/GameStyle.css">
+    <title>Jogo da velha</title>
+  </head>
+
+  <body>
+
+    <div class="player" id="player-container">
+      <h1 id="player"></h1>
+    </div>
+
+    <div class="pontuation-container">
+      <div class="player-pontuation one">
+        <h3 id="playerOne-pointer"></h3>
+      </div>
+      <div class="player-pontuation two">
+        <h3 id="playerTwo-pointer"></h3>
+      </div>
+    </div>
+
+    <div class="poupout" id="poupout">
+      <h3 id="winner-poupout"></h3>
+    </div>
+
+    <main>
+      <div class="buttons">
+        <button class="button" id="restart">
+          Restart
+          <span></span>
+        </button>
+
+        <button class="button" id="reset">
+          Reset score
+          <span></span>
+        </button>
+      </div>
+
+      <div class="container" id="container">
+        <div class="square" id="" data-value="a"></div>
+        <div class="square" id="" data-value="b"></div>
+        <div class="square" id="" data-value="c"></div>
+
+        <div class="square" id="" data-value="d"></div>
+        <div class="square" id="" data-value="e"></div>
+        <div class="square" id="" data-value="f"></div>
+
+        <div class="square" id="" data-value="g"></div>
+        <div class="square" id="" data-value="h"></div>
+        <div class="square" id="" data-value="i"></div>
+      </div>
+    </main>
+
+    <footer>
+      <h3>&copy;klinkonskydev</h3>
+    </footer>
+
+    <script src="../../public/scripts/GameSettings.js"></script>
+  </body>
+</html>
