@@ -7,6 +7,15 @@
 
   /* Typograph */
   --font-family: 'Rajdhani', sans-serif;
+
+  /* Colors */
+  --white: #fff;
+  --black: #000;
+  
+  --blue: #4f6de3;
+  --blue-light: #aabbfb;
+
+  --purple: #aa7eff;
 }
 
 *
@@ -45,6 +54,15 @@ body
 
   gap: 10px;
 
+  @media (max-width: 875px) {
+    width: 95%;
+    height: 5rem;
+
+    flex-direction: row;
+    justify-content: space-between;
+    
+    bottom: 20px; 
+  }
 
   .player-pontuation
   {
@@ -71,6 +89,10 @@ body
       border-radius: 20px;
       background-color: #bbaaff;
     }
+
+    @media (max-width: 875px) {
+      width: 80px;
+    }
   }
 }
 
@@ -88,7 +110,9 @@ body
     font: 200 30px var(--font-family);
     text-transform: uppercase;
 
-    color: #000;
+    letter-spacing: 2px;
+
+    color: var(--black);
   }
 }
 
@@ -116,11 +140,15 @@ body
 
   &.actived
   {
+    background-color: var(--white);
     right: 20px;
     top: 20px;
 
     opacity: 1;
 
+    @media (max-width: 875px) {
+      top: 50px;
+    }
   }
 
   h3
@@ -148,9 +176,8 @@ body
     background: none;
     
     color: #000;
-    font: 500 16pxvar(--font-family);
+    font: 400 21px var(--font-family);
     text-transform: uppercase;
-
 
     span
     {
@@ -192,16 +219,24 @@ body
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 
+  @media (max-width: 560px) {
+    width: 90vw;  
+  }
+
   .square
   {
     border: var(--border-default);
+    position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font: 100 5em var(--font-family);
-    
+    h1
+    {
+      font: 100 5em var(--font-family);
+    }
+
     &:nth-child(1)
     {
       border: none;
@@ -276,6 +311,19 @@ body
     {
       color: #aa7eff;
     }
+
+    &.winned
+    {
+
+      h1
+      {
+
+        transition: 1s;
+        
+        transform: rotate(360deg);
+        color: #f00;
+      }
+    }
   }
 }
 
@@ -283,8 +331,15 @@ footer
 {
   h3
   {
-    font: 400 20pxvar(--font-family);
+    font: 400 20px var(--font-family);
+    letter-spacing: 3px;
 
     opacity: .6;
   }
+}
+
+::selection
+{
+  color: #000;
+  background-color: #4f6de3;
 }

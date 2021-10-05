@@ -29,10 +29,11 @@ const player = HTMLElements.player;
   LETs ==================
 */
 
-let winned = false;
-let playerCounter = 1;
 let playerOnePointer = localStorage.getItem('playerOnePointer') || 0;
 let playerTwoPointer = localStorage.getItem('playerTwoPointer') || 0;
+
+let playerCounter = 1;
+let winned = false;
 
 /* 
   TO WIN ==================
@@ -62,6 +63,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[0].classList.add('winned');
+        square[1].classList.add('winned');
+        square[2].classList.add('winned');
       }
       if(square[0].id === 'X'  && square[0].id !== "" && square[0].id === square[3].id && square[0].id === square[6].id)
       {
@@ -72,6 +77,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[0].classList.add('winned');
+        square[3].classList.add('winned');
+        square[6].classList.add('winned');
       }
       if(square[0].id === 'X'  && square[0].id !== "" && square[0].id === square[4].id && square[0].id === square[8].id)
       {
@@ -82,6 +91,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[0].classList.add('winned');
+        square[4].classList.add('winned');
+        square[8].classList.add('winned');
       }
 
 
@@ -94,6 +107,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[1].classList.add('winned');
+        square[4].classList.add('winned');
+        square[7].classList.add('winned');
       }
 
 
@@ -106,6 +123,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[2].classList.add('winned');
+        square[4].classList.add('winned');
+        square[6].classList.add('winned');
       }
       if(square[2].id === 'X'  && square[2].id !== "" && square[2].id === square[5].id && square[2].id === square[8].id)
       {
@@ -116,6 +137,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[2].classList.add('winned');
+        square[5].classList.add('winned');
+        square[8].classList.add('winned');
       }
 
 
@@ -128,6 +153,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[3].classList.add('winned');
+        square[4].classList.add('winned');
+        square[5].classList.add('winned');
       }
 
       if(square[6].id === 'X'  && square[6].id !== "" && square[6].id === square[7].id && square[6].id === square[8].id)
@@ -139,6 +168,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[6].classList.add('winned');
+        square[7].classList.add('winned');
+        square[8].classList.add('winned');
       }
     }
 
@@ -155,6 +188,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[0].classList.add('winned');
+        square[1].classList.add('winned');
+        square[2].classList.add('winned');
       }
       if(square[0].id === 'O'  && square[0].id !== "" && square[0].id === square[3].id && square[0].id === square[6].id)
       {
@@ -165,6 +202,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[0].classList.add('winned');
+        square[3].classList.add('winned');
+        square[6].classList.add('winned');
       }
       if(square[0].id === 'O'  && square[0].id !== "" && square[0].id === square[4].id && square[0].id === square[8].id)
       {
@@ -175,6 +216,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[0].classList.add('winned');
+        square[4].classList.add('winned');
+        square[8].classList.add('winned');
       }
 
 
@@ -187,6 +232,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[1].classList.add('winned');
+        square[4].classList.add('winned');
+        square[7].classList.add('winned');
       }
 
 
@@ -199,6 +248,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[2].classList.add('winned');
+        square[4].classList.add('winned');
+        square[6].classList.add('winned');
       }
       if(square[2].id === 'O'  && square[2].id !== "" && square[2].id === square[5].id && square[2].id === square[8].id)
       {
@@ -209,6 +262,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[2].classList.add('winned');
+        square[5].classList.add('winned');
+        square[8].classList.add('winned');
       }
 
 
@@ -221,6 +278,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[3].classList.add('winned');
+        square[4].classList.add('winned');
+        square[5].classList.add('winned');
       }
 
       if(square[6].id === 'O'  && square[6].id !== "" && square[6].id === square[7].id && square[6].id === square[8].id)
@@ -232,6 +293,10 @@ const played = {
         winned = true
         playerOnePointerText.innerHTML = playerOnePointer;
         playerTwoPointerText.innerHTML = playerTwoPointer;  
+
+        square[6].classList.add('winned');
+        square[7].classList.add('winned');
+        square[8].classList.add('winned');
       }
     }
   },
@@ -317,7 +382,7 @@ squares.forEach( (square, index) => {
 
    if( !winned ){
     if( playerCounter === 1 ){
-      squares[index].innerHTML = 'X';
+      squares[index].innerHTML = '<h1>X</h1>';
       squares[index].classList.add('x')
 
       const notify =  `O player ${playerCounter} marcou X na posição ${index + 1} `;
@@ -327,7 +392,7 @@ squares.forEach( (square, index) => {
       DOM.playerChange('X');
     } else
     {
-      squares[index].innerHTML = 'O';
+      squares[index].innerHTML = '<h1>O</h1>';
       squares[index].classList.add('o')
       const notify =  `O player ${playerCounter} marcou O na posição ${index + 1} `;
       played.notifyMarkup(notify);

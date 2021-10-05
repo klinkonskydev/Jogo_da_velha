@@ -4,6 +4,12 @@
   --border-default: 2px solid #b1a1ff;
   /* Typograph */
   --font-family: 'Rajdhani', sans-serif;
+  /* Colors */
+  --white: #fff;
+  --black: #000;
+  --blue: #4f6de3;
+  --blue-light: #aabbfb;
+  --purple: #aa7eff;
 }
 
 * {
@@ -44,6 +50,21 @@ body {
   gap: 10px;
 }
 
+@media (max-width: 875px) {
+  .pontuation-container {
+    width: 95%;
+    height: 5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    bottom: 20px;
+  }
+}
+
 .pontuation-container .player-pontuation {
   width: 100%;
   height: 100%;
@@ -72,6 +93,12 @@ body {
   background-color: #bbaaff;
 }
 
+@media (max-width: 875px) {
+  .pontuation-container .player-pontuation {
+    width: 80px;
+  }
+}
+
 .player {
   position: absolute;
   left: 50%;
@@ -83,7 +110,8 @@ body {
 .player h1 {
   font: 200 30px var(--font-family);
   text-transform: uppercase;
-  color: #000;
+  letter-spacing: 2px;
+  color: var(--black);
 }
 
 .poupout {
@@ -110,9 +138,16 @@ body {
 }
 
 .poupout.actived {
+  background-color: var(--white);
   right: 20px;
   top: 20px;
   opacity: 1;
+}
+
+@media (max-width: 875px) {
+  .poupout.actived {
+    top: 50px;
+  }
 }
 
 .poupout h3 {
@@ -137,7 +172,7 @@ body {
   outline: none;
   background: none;
   color: #000;
-  font: 500 16pxvar --font-family;
+  font: 400 21px var(--font-family);
   text-transform: uppercase;
 }
 
@@ -174,8 +209,15 @@ body {
       grid-template-rows: repeat(3, 1fr);
 }
 
+@media (max-width: 560px) {
+  .container {
+    width: 90vw;
+  }
+}
+
 .container .square {
   border: var(--border-default);
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,6 +227,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.container .square h1 {
   font: 100 5em var(--font-family);
 }
 
@@ -244,8 +289,27 @@ body {
   color: #aa7eff;
 }
 
+.container .square.winned h1 {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: #f00;
+}
+
 footer h3 {
-  font: 400 20pxvar --font-family;
+  font: 400 20px var(--font-family);
+  letter-spacing: 3px;
   opacity: .6;
+}
+
+::-moz-selection {
+  color: #000;
+  background-color: #4f6de3;
+}
+
+::selection {
+  color: #000;
+  background-color: #4f6de3;
 }
 /*# sourceMappingURL=GameStyle.css.map */
